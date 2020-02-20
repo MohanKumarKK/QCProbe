@@ -13,8 +13,6 @@ def probe_status(http_ts_link):
     ts_response = requests.get(http_ts_link)
     print(ts_response.status_code)
     print(http_ts_link)
-    cmd = 'wget --spider ' + http_ts_link
-    os.system(cmd)
     file_write("response.txt", "a", http_ts_link)
 
 
